@@ -79,16 +79,47 @@ footer h4{color:var(--ink);border-left:3px solid var(--y);padding-left:10px;font
 footer a{display:block;color:var(--mut);font-size:14px;padding:4px 0;transition:color .2s}footer a:hover{color:var(--ink)}
 .copy{border-top:1px solid var(--line);margin-top:44px;padding-top:22px;font-size:13px;color:#8a8a8a;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .rv{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}.rv.vis{opacity:1;transform:none}
+/* ── Alignment & spacing ── */
+.lbl+h2,.lbl+h1{margin-top:10px}
+.sec .wrap>h2,.sec .wrap>.lbl~h2{margin-bottom:32px}
+.cta h2{max-width:620px;margin-bottom:0}.cta p{max-width:540px}
+.card h3{margin-top:16px;margin-bottom:8px}.card p{line-height:1.65}
+.stat span{display:block;margin-top:4px;line-height:1.4}
+.legal h3:first-child{margin-top:0}.legal p{line-height:1.75;margin-bottom:6px}
+.contact-detail{margin-bottom:22px}.contact-detail b{display:block;margin-bottom:4px}
+.founder-bio>p{margin-bottom:16px}
+.phead h1{margin-top:12px}
 @media(max-width:860px){
 nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bg);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--line)}nav.open{display:flex}
 .burger{display:block}.nav>.btn{display:none}
-.g3,.g2,.split,.fg,.r2{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.sec{padding:64px 0}.cta{padding:44px 26px}.hero{padding:70px 0}}
+.g3,.g2,.split,.fg,.r2{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.sec{padding:64px 0}.cta{padding:44px 26px}.hero{padding:70px 0}
+.phead{padding:60px 0 44px}
+.hero p{font-size:15px}
+.faq summary{font-size:16px}
+.founder-photo{width:200px;height:200px;font-size:60px}
+.founder-photo-wrap{order:-1}
+}
+@media(max-width:480px){
+.wrap{padding:0 16px}
+.sec{padding:48px 0}.hero{padding:52px 0 44px}.phead{padding:44px 0 32px}
+h1{font-size:clamp(32px,8vw,48px)}
+.hero p{font-size:14px;margin:18px 0 28px}
+.stats{grid-template-columns:1fr 1fr;gap:14px}.stat strong{font-size:30px}
+.card{padding:22px}.faq summary{font-size:15px}
+.cta{padding:32px 20px;border-radius:18px}
+.marq{font-size:13px}.marq span{margin:0 16px}
+.btn{padding:12px 20px;font-size:13px}
+.copy{flex-direction:column;gap:6px}
+.founder-photo{width:140px;height:140px;font-size:44px}
+.logo-img{height:40px!important}
+}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <header><div class="wrap nav">
-<a class="logo" href="#/home"><i>S</i><span>sutradhar<b>solutions</b></span></a>
+<!-- <a class="logo" href="#/home"><i>S</i><span>sutradhar<b>solutions</b></span></a> -->
+<a class="logo" href="#/home"><img src="assets/sutradhar-logo.png" alt="Sutradhar Solutions" class="logo-img" style="height:52px;width:auto;display:block;" /></a>
 <nav id="nav"><a href="#/home">Home</a><a href="#/about">About Us</a><a href="#/services">Our Services</a><a href="#/contact">Contact Us</a><a href="#/terms">Terms</a></nav>
 <a class="btn" href="#/contact">Let’s chat</a>
 <button class="burger" id="bg">Menu</button>
@@ -98,20 +129,20 @@ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bg);
 <!-- HOME -->
 <section class="page" id="home">
 <div class="hero"><div class="wrap">
-<div class="tag">/ Strategy-led consulting</div>
+<div class="tag">/ Engineering &amp; Facility Management Consulting</div>
 <h1>The <em>thread</em> that connects your strategy to results.</h1>
-<p>Sutradhar Solutions partners with ambitious businesses to untangle complexity, sharpen decisions and deliver measurable growth.</p>
+<p>Sutradhar Solutions brings 40+ years of hands-on engineering and facility management expertise to help businesses solve complex infrastructure, operational, and strategic challenges.</p>
 <a class="btn" href="#/contact">Book a strategy call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </div></div>
-<div class="marq"><div><span>/ Strategy</span><span>/ Digital Transformation</span><span>/ Process Excellence</span><span>/ Technology Advisory</span><span>/ Growth</span><span>/ Strategy</span><span>/ Digital Transformation</span><span>/ Process Excellence</span><span>/ Technology Advisory</span><span>/ Growth</span><span>/ Strategy</span><span>/ Digital Transformation</span><span>/ Process Excellence</span><span>/ Technology Advisory</span><span>/ Growth</span><span>/ Strategy</span><span>/ Digital Transformation</span><span>/ Process Excellence</span><span>/ Technology Advisory</span><span>/ Growth</span></div></div>
+<div class="marq"><div><span>/ Facility Management</span><span>/ Data Center Engineering</span><span>/ Electrical Systems</span><span>/ PUE Optimisation</span><span>/ Project Engineering</span><span>/ Infrastructure Advisory</span><span>/ Process Excellence</span><span>/ Training &amp; Enablement</span><span>/ Facility Management</span><span>/ Data Center Engineering</span><span>/ Electrical Systems</span><span>/ PUE Optimisation</span><span>/ Project Engineering</span><span>/ Infrastructure Advisory</span><span>/ Process Excellence</span><span>/ Training &amp; Enablement</span></div></div>
 <div class="sec"><div class="wrap split">
 <div class="rv"><div class="lbl">Who we are</div><h2>Most businesses know where they want to go. The gap is how to get there.</h2></div>
-<div class="rv"><p class="mut">In Sanskrit, a <em>sutradhar</em> is the one who holds the threads and guides the story. That is our role: we hold the moving parts of your business together, align people, process and technology, and steer you from intent to outcome.</p><br><a class="btn dk" href="#/about">About us</a></div>
+<div class="rv mut" style="display:flex;flex-direction:column;gap:18px"><p>In Sanskrit, a <em>sutradhar</em> is the one who holds the threads and guides the story. That is our role: we hold the moving parts of your facility and engineering operations together, aligning technology, systems, and execution to steer you from intent to outcome.</p><div><a class="btn dk" href="#/about">About us</a></div></div>
 </div></div>
 <div class="sec alt"><div class="wrap">
 <div class="lbl">Our services</div><h2>Everything you need to move forward, under one roof.</h2>
 <div class="list rv" style="margin-top:40px">
-<a href="#/services">01 Business Strategy <span>→</span></a><a href="#/services">02 Digital Transformation <span>→</span></a><a href="#/services">03 Technology Advisory <span>→</span></a><a href="#/services">04 Process Optimisation <span>→</span></a><a href="#/services">05 Training &amp; Enablement <span>→</span></a>
+<a href="#/services">01 Facility Management Consulting <span>→</span></a><a href="#/services">02 Data Center / IDC Engineering <span>→</span></a><a href="#/services">03 Electrical Systems Advisory <span>→</span></a><a href="#/services">04 Energy Efficiency &amp; PUE Optimisation <span>→</span></a><a href="#/services">05 Project Engineering &amp; Commissioning <span>→</span></a>
 </div></div></div>
 <div class="sec"><div class="wrap">
 <div class="lbl">How we work</div><h2>A simple, transparent way of working.</h2>
@@ -133,10 +164,26 @@ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bg);
 <!-- ABOUT -->
 <section class="page" id="about">
 <div class="phead"><div class="wrap"><div class="tag">/ About us</div><h1 style="font-size:clamp(34px,5vw,60px)">Holding the threads, <em>telling your story</em> forward.</h1><p>We are a consulting firm built on clarity, accountability and craft.</p></div></div>
-<div class="sec"><div class="wrap split"><div class="rv"><div class="lbl">Our story</div><h2>Why “Sutradhar”?</h2></div><div class="rv mut"><p>A sutradhar is the narrator and guide of a traditional performance, the person who keeps every thread in hand so the whole story flows. We bring that same role to business: connecting strategy, teams and technology into one coherent direction.</p><br><p>We combine hands-on delivery experience with structured thinking, so our advice is never theory alone. Every recommendation we make is something we are ready to help you implement.</p></div></div>
-<div class="wrap"><div class="stats rv"><div class="stat"><strong>360°</strong><span class="mut">Strategy to execution</span></div><div class="stat"><strong>1:1</strong><span class="mut">Senior-led engagements</span></div><div class="stat"><strong>100%</strong><span class="mut">Transparent scoping</span></div><div class="stat"><strong>24h</strong><span class="mut">Response time</span></div></div></div></div>
+<div class="sec"><div class="wrap split"><div class="rv"><div class="lbl">Our story</div><h2>Why “Sutradhar”?</h2></div><div class="rv mut" style="display:flex;flex-direction:column;gap:18px"><p>A sutradhar is the narrator and guide of a traditional performance, the person who keeps every thread in hand so the whole story flows. We bring that same role to business: connecting strategy, teams and technology into one coherent direction.</p><p>We combine hands-on delivery experience with structured thinking, so our advice is never theory alone. Every recommendation we make is something we are ready to help you implement.</p></div></div>
+<div class="wrap"><div class="stats rv"><div class="stat"><strong>40+</strong><span class="mut">Years Industry Experience</span></div><div class="stat"><strong>1:1</strong><span class="mut">Senior-led engagements</span></div><div class="stat"><strong>130K+</strong><span class="mut">Sq.ft. Data Centers Engineered</span></div><div class="stat"><strong>24h</strong><span class="mut">Response time</span></div></div></div></div>
 <div class="sec alt"><div class="wrap"><div class="lbl">Our values</div><h2>What guides every engagement.</h2>
 <div class="grid g3"><div class="card rv"><h3>Clarity</h3><p>Plain language, clear priorities and no jargon-filled decks.</p></div><div class="card rv"><h3>Accountability</h3><p>We own outcomes, not just deliverables, and measure what matters.</p></div><div class="card rv"><h3>Partnership</h3><p>We work as an extension of your team, with honesty and respect.</p></div></div></div></div>
+<!-- FOUNDER -->
+<div class="sec"><div class="wrap split">
+<div class="rv">
+<div class="lbl">Meet the Founder</div>
+<h2 style="font-size:clamp(24px,3vw,36px)">Suresh S Dikshit</h2>
+<p class="mut" style="margin-top:8px;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.08em">Facility Management &amp; Engineering Professional</p>
+<div class="founder-bio" style="margin-top:22px">
+<p class="mut">Suresh S Dikshit brings over four decades of engineering and operations expertise spanning the Indian Army, Reliance Industries, and Reliance Communications. Having risen through Engineer to GM-level roles, he has led the design and commissioning of large-scale electrical and facility systems — including 130,000+ sq.ft. of raised-floor data centre space — and conducted assignments at ABB Sweden, Wartsila France, and Bechtel UK.</p>
+<p class="mut">Since November 2014, Suresh has channelled this experience into Sutradhar Solutions, providing freelance consulting to organisations navigating complex infrastructure, energy efficiency, and facility management challenges.</p>
+</div>
+<div style="margin-top:28px"><a class="btn dk" href="#/contact">Work with Suresh</a></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:center;" class="founder-photo-wrap">
+<div class="founder-photo" id="founder-photo-placeholder" style="width:260px;height:260px;border-radius:50%;background:var(--card);border:4px solid var(--y);display:flex;align-items:center;justify-content:center;font-size:80px;font-weight:800;color:var(--y);overflow:hidden;">S</div>
+</div>
+</div></div>
 <div class="sec"><div class="wrap"><div class="cta rv"><h2>Let’s build something that lasts.</h2><p>We’d love to learn about your business.</p><a class="btn" href="#/contact">Get in touch</a></div></div></div>
 </section>
 
@@ -144,12 +191,12 @@ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bg);
 <section class="page" id="services">
 <div class="phead"><div class="wrap"><div class="tag">/ Our services</div><h1 style="font-size:clamp(34px,5vw,60px)">Everything your business needs to <em>grow</em>.</h1><p>Focused consulting services, delivered by people who have done the work.</p></div></div>
 <div class="sec"><div class="wrap"><div class="grid g2" style="margin-top:0">
-<div class="card rv"><b class="n">01</b><h3>Business Strategy</h3><p>Market positioning, growth planning, operating models and leadership alignment to give your business a clear direction.</p></div>
-<div class="card rv"><b class="n">02</b><h3>Digital Transformation</h3><p>Modernise how you work: from legacy systems and manual processes to connected, data-driven operations.</p></div>
-<div class="card rv"><b class="n">03</b><h3>Technology Advisory</h3><p>Architecture reviews, vendor selection, automation and infrastructure guidance that fits your scale and budget.</p></div>
-<div class="card rv"><b class="n">04</b><h3>Process Optimisation</h3><p>Find bottlenecks, remove waste and build repeatable workflows that your teams can actually follow.</p></div>
-<div class="card rv"><b class="n">05</b><h3>Training &amp; Enablement</h3><p>Workshops and playbooks so your people can own and sustain the change after we step back.</p></div>
-<div class="card rv"><b class="n">06</b><h3>Risk &amp; Compliance Support</h3><p>Practical frameworks and documentation to help you meet regulatory and security expectations.</p></div>
+<div class="card rv"><b class="n">01</b><h3>Facility Management Consulting</h3><p>End-to-end facility management advisory — from operational audits and maintenance strategies to multi-site infrastructure planning for industrial and commercial facilities.</p></div>
+<div class="card rv"><b class="n">02</b><h3>Data Center / IDC Engineering</h3><p>Design, engineering, and commissioning of data centre infrastructure including power systems, cooling, redundancy architecture, and 24×7 operational frameworks.</p></div>
+<div class="card rv"><b class="n">03</b><h3>Electrical Systems Advisory</h3><p>Specification, selection, inspection, and commissioning of large-scale electrical equipment — DG sets, transformers, HT/LT panels, STGs, and bespoke power distribution systems.</p></div>
+<div class="card rv"><b class="n">04</b><h3>Energy Efficiency &amp; PUE Optimisation</h3><p>Benchmarking and improving Power Usage Effectiveness (PUE) for data centres and process plants, with validated conceptual measures that deliver real energy savings.</p></div>
+<div class="card rv"><b class="n">05</b><h3>Project Engineering &amp; Commissioning</h3><p>Independent project engineering for large capital projects — from petrochemical plants and telecom rollouts to corporate facilities — covering design, vendor management, and site commissioning.</p></div>
+<div class="card rv"><b class="n">06</b><h3>Training &amp; Enablement</h3><p>Workshops and practical playbooks to build in-house engineering capability so your teams can own and sustain operations confidently after engagement ends.</p></div>
 </div></div></div>
 <div class="sec"><div class="wrap"><div class="cta rv"><h2>Not sure what you need?</h2><p>Book a free discovery call and we’ll help you find out.</p><a class="btn" href="#/contact">Book a call</a></div></div></div>
 </section>
@@ -159,10 +206,10 @@ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bg);
 <div class="phead"><div class="wrap"><div class="tag">/ Contact us</div><h1 style="font-size:clamp(34px,5vw,60px)">Tell us about your <em>next stage</em>.</h1></div></div>
 <div class="sec"><div class="wrap split">
 <div class="rv"><h2 style="font-size:30px">Let’s talk.</h2><p class="mut" style="margin:18px 0 28px">Share a few details and we’ll reply within one business day.</p>
-<p><b>Email</b><br><span class="mut">hello@sutradharsolutions.com</span></p><br><p><b>Phone</b><br><span class="mut">+91 00000 00000</span></p><br><p><b>Location</b><br><span class="mut">Your city, India</span></p></div>
+<div class="contact-detail"><b>Email</b><span class="mut"><a href="mailto:suresh.dikshit@sutradharsolutions.in">suresh.dikshit@sutradharsolutions.in</a></span></div><div class="contact-detail"><b>Location</b><span class="mut">Navi Mumbai, India</span></div></div>
 <form class="rv" id="f"><div class="r2"><label>Name<input required placeholder="Your name"></label><label>Company<input placeholder="Company name"></label></div>
 <div class="r2"><label>Email<input type="email" required placeholder="you@company.com"></label><label>Phone<input type="tel" placeholder="+91"></label></div>
-<label>I’m interested in<select><option>Business Strategy</option><option>Digital Transformation</option><option>Technology Advisory</option><option>Process Optimisation</option><option>Training &amp; Enablement</option><option>Something else</option></select></label>
+<label>I’m interested in<select><option>Facility Management Consulting</option><option>Data Center / IDC Engineering</option><option>Electrical Systems Advisory</option><option>Energy Efficiency &amp; PUE Optimisation</option><option>Project Engineering &amp; Commissioning</option><option>Training &amp; Enablement</option><option>Something else</option></select></label>
 <label>Tell us about your project<textarea rows="5" placeholder="What are you trying to achieve?"></textarea></label>
 <button class="btn" type="submit">Send message</button>
 <div class="ok" id="ok">Thank you! We will contact you shortly.</div></form>
@@ -181,15 +228,15 @@ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bg);
 <h3>6. Limitation of liability</h3><p>Our advice is provided in good faith based on information available at the time. We are not liable for indirect or consequential losses, and total liability is limited to the fees paid for the relevant engagement.</p>
 <h3>7. Website use</h3><p>Content on this site is for general information and does not constitute professional advice. You may not copy, reproduce or misuse any content without written permission.</p>
 <h3>8. Governing law</h3><p>These terms are governed by the laws of India. Disputes will be subject to the jurisdiction of the courts in the location of our registered office.</p>
-<h3>9. Contact</h3><p>Questions about these terms? Write to hello@sutradharsolutions.com.</p>
+<h3>9. Contact</h3><p>Questions about these terms? Write to <a href="mailto:suresh.dikshit@sutradharsolutions.in">suresh.dikshit@sutradharsolutions.in</a>.</p>
 </div></div>
 </section>
 </main>
 
 <footer><div class="wrap"><div class="fg">
-<div><a class="logo" href="#/home"><i>S</i><span>sutradhar<b>solutions</b></span></a><p style="color:#8a8a8a;font-size:14px;margin-top:16px;max-width:300px">Your trusted consulting partner for strategy, technology and growth.</p></div>
+<div><a class="logo" href="#/home"><img src="assets/sutradhar-logo.png" alt="Sutradhar Solutions" style="height:44px;width:auto;display:block;" /></a><p style="color:#8a8a8a;font-size:14px;margin-top:16px;max-width:300px">Your trusted engineering &amp; facility management consulting partner.</p></div>
 <div><h4>Company</h4><a href="#/home">Home</a><a href="#/about">About Us</a><a href="#/contact">Contact Us</a><a href="#/terms">Terms &amp; Conditions</a></div>
-<div><h4>Services</h4><a href="#/services">Business Strategy</a><a href="#/services">Digital Transformation</a><a href="#/services">Technology Advisory</a><a href="#/services">Process Optimisation</a></div>
+<div><h4>Services</h4><a href="#/services">Facility Management</a><a href="#/services">Data Center Engineering</a><a href="#/services">Electrical Systems Advisory</a><a href="#/services">Energy Efficiency &amp; PUE</a></div>
 </div><div class="copy"><span>© 2026 Sutradhar Solutions. All rights reserved.</span><a href="#/terms" style="display:inline">Terms &amp; Conditions</a></div></div></footer>
 
 <script>
